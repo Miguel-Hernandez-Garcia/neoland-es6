@@ -16,13 +16,12 @@ const functionArrowExercise = (a = 10, b = 5) => a + b
 const functionArrowNoParam = functionArrowExercise()
 console.log("🚀 ~ functionArrowNoParam:", functionArrowNoParam);
 
-/*const functionArrowOneParam = functionArrowExercise(a,2)
+const functionArrowOneParam = functionArrowExercise(2)
 console.log("🚀 ~ functionArrowOneParam:", functionArrowOneParam);
 
-const functionArrowTwoParam = functionArrowExercise(a,b)
-console.log("🚀 ~ functionArrowTwoParam:", functionArrowTwoParam);*/
+const functionArrowTwoParam = functionArrowExercise(2,2)
+console.log("🚀 ~ functionArrowTwoParam:", functionArrowTwoParam);
 
-//EJERCICIO PENDIENTE (Da error con solo un parámetro)
 
 /*EJERCICIOS DE ES6
 Iteracion 2.1: Destructuring (Primer ejercicio)*/
