@@ -93,3 +93,69 @@ const carProperties = {carname, itv}=car;
 console.log("🚀 ~ carProperties:", carProperties);
 const itvYears = [itvYear1, itvYear2, itvYear3]=itv;
 console.log("🚀 ~ itvYears:", itvYears);
+
+/*EJERCICIOS DE ES6
+Iteracion 3.1: Spread operators (Primer ejercicio)*/
+
+/*-------------------------------------------------------------------------
+3.1 Dado el siguiente array, crea una copia usando spread operators.
+const pointsList = [32, 54, 21, 64, 75, 43]
+---------------------------------------------------------------------------*/
+const pointsList = [32, 54, 21, 64, 75, 43]
+const copyPointsList = [...pointsList]
+console.log("🚀 ~ copyPointsList:", copyPointsList);
+
+/*EJERCICIOS DE ES6
+Iteracion 3.2: Spread operators (Segundo ejercicio)*/
+
+/*-------------------------------------------------------------------------
+3.2 Dado el siguiente objeto, crea una copia usando spread operators.
+const toy = {name: 'Bus laiyiar', date: '20-30-1995', color: 'multicolor'};
+---------------------------------------------------------------------------*/
+const toy = {name: 'Bus laiyiar', date: '20-30-1995', color: 'multicolor'};
+const copyToy = {...toy}
+console.log("🚀 ~ copyToy:", copyToy);
+
+/*EJERCICIOS DE ES6
+Iteracion 3.3: Spread operators (Tercer ejercicio)*/
+
+/*-------------------------------------------------------------------------
+3.3 Dado los siguientes arrays, crea un nuevo array juntandolos usando 
+spread operatos.
+const pointsList = [32, 54, 21, 64, 75, 43];
+const pointsLis2 = [54,87,99,65,32];
+---------------------------------------------------------------------------*/
+
+const pointsList1 = [32, 54, 21, 64, 75, 43];
+const pointsList2 = [54,87,99,65,32];
+const pointsListSum = [...pointsList1, ...pointsList2];
+console.log("🚀 ~ pointsListSum:", pointsListSum);
+
+/*EJERCICIOS DE ES6
+Iteracion 3.4: Spread operators (Cuarto ejercicio)*/
+
+/*-------------------------------------------------------------------------
+3.4 Dado los siguientes objetos. Crea un nuevo objeto fusionando los dos 
+con spread operators.
+const toy = {name: 'Bus laiyiar', date: '20-30-1995', color: 'multicolor'};
+const toyUpdate = {lights: 'rgb', power: ['Volar like a dragon', 'MoonWalk']}
+---------------------------------------------------------------------------*/
+
+const toyUpdate1 = {name: 'Bus laiyiar', date: '20-30-1995', color: 'multicolor'};
+const toyUpdate2 = {lights: 'rgb', power: ['Volar like a dragon', 'MoonWalk']};
+const toyUpdateSum = {...toyUpdate1, ...toyUpdate2};
+console.log("🚀 ~ toyUpdateSum:", toyUpdateSum);
+
+/*EJERCICIOS DE ES6
+Iteracion 3.5: Spread operators (Quinto ejercicio)*/
+
+/*-------------------------------------------------------------------------
+3.5 Dado el siguiente array. Crear una copia de él eliminando la posición 2 
+pero sin editar el array inicial. De nuevo, usando spread operatos.
+const colors = ['rojo', 'azul', 'amarillo', 'verde', 'naranja'];
+---------------------------------------------------------------------------*/
+const colors = ['rojo', 'azul', 'amarillo', 'verde', 'naranja'];
+const copyColors = [...colors];
+const copyColorsFinal = copyColors.splice(2,1);
+console.log("🚀 ~ copyColorsFinal:", copyColorsFinal)
+console.log("🚀 ~ copyColors:", copyColors);
