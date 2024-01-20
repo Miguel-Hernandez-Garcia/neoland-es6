@@ -512,3 +512,89 @@ console.log("🚀 ~ mutationPorompo:", mutationPorompo);
 
 const alienPorompo = {...alienNameFilter, mutation: mutationPorompo};
 console.log("🚀 ~ alienPorompo:", alienPorompo);
+
+/*EJERCICIOS DE ES6
+Iteracion 7.1: Reduce (Primer ejercicio)*/
+
+/*-------------------------------------------------------------------------
+7.1 Dado el siguiente array, haz una suma de todos las notas de los examenes de 
+los alumnos usando la función .reduce().
+
+const exams = [
+    {name: 'Yuyu Cabeza Crack', score: 5}, 
+    {name: 'Maria Aranda Jimenez', score: 1}, 
+    {name: 'Cristóbal Martínez Lorenzo', score: 6}, 
+    {name: 'Mercedez Regrera Brito', score: 7},
+    {name: 'Pamela Anderson', score: 3},
+    {name: 'Enrique Perez Lijó', score: 6},
+    {name: 'Pedro Benitez Pacheco', score: 8},
+    {name: 'Ayumi Hamasaki', score: 4},
+    {name: 'Robert Kiyosaki', score: 2},
+    {name: 'Keanu Reeves', score: 10}
+];
+---------------------------------------------------------------------------*/
+const exams = [
+    {name: 'Yuyu Cabeza Crack', score: 5}, 
+    {name: 'Maria Aranda Jimenez', score: 1}, 
+    {name: 'Cristóbal Martínez Lorenzo', score: 6}, 
+    {name: 'Mercedez Regrera Brito', score: 7},
+    {name: 'Pamela Anderson', score: 3},
+    {name: 'Enrique Perez Lijó', score: 6},
+    {name: 'Pedro Benitez Pacheco', score: 8},
+    {name: 'Ayumi Hamasaki', score: 4},
+    {name: 'Robert Kiyosaki', score: 2},
+    {name: 'Keanu Reeves', score: 10}
+];
+
+const examsSum = exams.reduce((accumulator, exam) => accumulator + exam.score, 0);
+console.log("🚀 ~ examsSum:", examsSum);
+
+
+/*EJERCICIOS DE ES6
+Iteracion 7.2: Reduce (Segundo ejercicio)*/
+
+/*-------------------------------------------------------------------------
+7.2 Dado el mismo array, haz una suma de todos las notas de los examenes de los 
+alumnos que esten aprobados usando la función .reduce().
+---------------------------------------------------------------------------*/
+const exams2 = [
+    {name: 'Yuyu Cabeza Crack', score: 5}, 
+    {name: 'Maria Aranda Jimenez', score: 1}, 
+    {name: 'Cristóbal Martínez Lorenzo', score: 6}, 
+    {name: 'Mercedez Regrera Brito', score: 7},
+    {name: 'Pamela Anderson', score: 3},
+    {name: 'Enrique Perez Lijó', score: 6},
+    {name: 'Pedro Benitez Pacheco', score: 8},
+    {name: 'Ayumi Hamasaki', score: 4},
+    {name: 'Robert Kiyosaki', score: 2},
+    {name: 'Keanu Reeves', score: 10}
+];
+
+const examsApprovedSum = exams2.reduce((accumulator, exam)=> {
+    if (exam.score >=5) {accumulator += exam.score}
+return accumulator
+}, 0)
+console.log("🚀 ~ examsSum:", examsApprovedSum);
+
+/*EJERCICIOS DE ES6
+Iteracion 7.3: Reduce (Tercer ejercicio)*/
+
+/*-------------------------------------------------------------------------
+7.3 Dado el mismo array, haz la media de las notas de todos los examenes .reduce().
+---------------------------------------------------------------------------*/
+
+const exams3 = [
+    {name: 'Yuyu Cabeza Crack', score: 5}, 
+    {name: 'Maria Aranda Jimenez', score: 1}, 
+    {name: 'Cristóbal Martínez Lorenzo', score: 6}, 
+    {name: 'Mercedez Regrera Brito', score: 7},
+    {name: 'Pamela Anderson', score: 3},
+    {name: 'Enrique Perez Lijó', score: 6},
+    {name: 'Pedro Benitez Pacheco', score: 8},
+    {name: 'Ayumi Hamasaki', score: 4},
+    {name: 'Robert Kiyosaki', score: 2},
+    {name: 'Keanu Reeves', score: 10}
+];
+
+const examsAverage = exams3.reduce((accumulator, exam) => accumulator + exam.score, 0)/exams.length;
+console.log("🚀 ~ examsAverage:", examsAverage);
