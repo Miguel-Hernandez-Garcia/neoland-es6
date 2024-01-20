@@ -159,3 +159,89 @@ const copyColors = [...colors];
 const copyColorsFinal = copyColors.splice(2,1);
 console.log("🚀 ~ copyColorsFinal:", copyColorsFinal)
 console.log("🚀 ~ copyColors:", copyColors);
+
+/*EJERCICIOS DE ES6
+Iteracion 4.1: Map (Primer ejercicio)*/
+
+/*-------------------------------------------------------------------------
+4.1 Dado el siguiente array, devuelve un array con sus nombres 
+utilizando .map().
+const users = [
+	{id: 1, name: 'Abel'},
+	{id:2, name: 'Julia'},
+	{id:3, name: 'Pedro'},
+	{id:4, name: 'Amanda'}
+];
+---------------------------------------------------------------------------*/
+const users = [
+	{id: 1, name: 'Abel'},
+	{id:2, name: 'Julia'},
+	{id:3, name: 'Pedro'},
+	{id:4, name: 'Amanda'}
+];
+
+const userNames = users.map(user => user.name);
+console.log("🚀 ~ userNames:", userNames);
+
+/*EJERCICIOS DE ES6
+Iteracion 4.2: Map (Segundo ejercicio)*/
+
+/*-------------------------------------------------------------------------
+4.2 Dado el siguiente array, devuelve una lista que contenga los valores 
+de la propiedad .name y cambia el nombre a 'Anacleto' en caso de que 
+empiece por 'A'.
+const users = [
+	{id: 1, name: 'Abel'},
+	{id:2, name: 'Julia'},
+	{id:3, name: 'Pedro'},
+	{id:4, name: 'Amanda'}
+];
+---------------------------------------------------------------------------*/
+
+const ausers = [
+	{id: 1, name: 'Abel'},
+	{id:2, name: 'Julia'},
+	{id:3, name: 'Pedro'},
+	{id:4, name: 'Amanda'}
+];
+
+const usersAChanged = ausers.map((auser, index) => {
+if (auser.name.startsWith("A")) {
+    auser.name="Anacleto";
+}
+return auser.name;
+});
+
+console.log("🚀 ~ usersAChanged:", usersAChanged);
+
+/*EJERCICIOS DE ES6
+Iteracion 4.3: Map (Tercer ejercicio)*/
+
+/*-------------------------------------------------------------------------
+4.3 Dado el siguiente array, devuelve una lista que contenga los valores 
+de la propiedad .name y añade al valor de .name el string ' (Visitado)' 
+cuando el valor de la propiedad isVisited = true.
+const cities = [
+	{isVisited:true, name: 'Tokyo'}, 
+	{isVisited:false, name: 'Madagascar'},
+	{isVisited:true, name: 'Amsterdam'}, 
+	{isVisited:false, name: 'Seul'}
+];
+---------------------------------------------------------------------------*/
+
+const cities = [
+	{isVisited:true, name: 'Tokyo'}, 
+	{isVisited:false, name: 'Madagascar'},
+	{isVisited:true, name: 'Amsterdam'}, 
+	{isVisited:false, name: 'Seul'}
+];
+
+const checkIsVisited = cities.map((city, index) => {
+    if (city.isVisited === true) {
+city.name += " (Visitado)";
+    }
+    return city.name;
+});
+console.log("🚀 ~ checkIsVisited ~ checkIsVisited:", checkIsVisited);
+
+
